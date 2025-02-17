@@ -1,0 +1,16 @@
+FIRST PROMPT (text-->text):
+-notes for additional parameters: page limit. 
+-goal: to delimit this block of text into pages.
+-prompt: You are a book editor for childrens story books. I will provide you the text that makes up the story, and your job is to separate the text into Pages. A Page should not have too much text, and some pages may not need text at all. However, each page break should make logical sense. You wouldn't want to start a new page mid sentence or mid thought, so that is your main job at this point, to separate this text into pages that help the story make sense. You will insert a delimiter into the text where a page break should be. Do not edit the text, simply find the best way to break it into pages.
+The delimiter will be: $%$
+You will return the story, with the delimiter inserted where page breaks should be, and return only that, with no other explanatory text.
+I will now provide the story:
+<INSERT TEXT BLOCK THAT USER PROVIDED>
+
+**Now process the output into Pages using the delimiter to split**
+**Use each Page for a second prompt**
+
+SECOND PROMPT (text-->image):
+-goal: to get an image that goes with the text on this page.
+-prompt: You are an illustrator for childrens story books. Your job is to take the text on the page and produce an image to go along with the text. This is for children of the age <INSERT BOOK AUDIENCE AGE>, so make sure the image is age appropriate. Here is the page text:
+<INSERT PAGE TEXT>
